@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoList</title>
+    <style>
+        #title {
+            text-align: center;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Title 1</h1>
+
+    <ul id="list">
+        <li>list 1</li>
+    </ul>
+
+
+    <script>
+        var list = document.getElementById("list");
+
+        var colors = [ "red", "blue", "yellow"];
+        var count = 0;
+
+        list.style.color = "red"
+
+        setInterval(() => {
+
+            list.style.color = colors[count]
+
+            if (count < colors.length) {
+                count++;
+            } else {
+                count = 0;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
